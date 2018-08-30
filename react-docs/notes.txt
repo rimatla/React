@@ -1,0 +1,10 @@
+yarn init
+yarn add react react-dom -d
+yarn add babel-loader -d
+yarn add babel-preset-latest --dev
+yarn add babel-preset-react --dev
+yarn add babel-preset-stage-0 --dev
+yarn add babel-cli --dev
+
+run script
+$yarn run start

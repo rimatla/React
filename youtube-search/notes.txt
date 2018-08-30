@@ -1,0 +1,74 @@
+******************************************************************************************************
+Deployment to Heroku
+1- edit package.json and tell webpack that we want a production version of the app
+"postinstall": "webpack -p"
+
+2- run
+$webpack -p
+
+3- edit package.json
+ "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+ "start": "node server.js"
+
+4- Create a server.js file
+//make sure everything works
+$ node server.js
+
+5- Follow heroku docs to deploy it
+debug: $heroku logs
+******************************************************************************************************
+
+
+
+
+
+
+
+To start app:
+$npm install --save
+$webpack
+$npm start
+- Go to localhost 8080
+
+
+
+By Stephen Grider
+- Get an youtube api on https://console.developers.google.com/apis/library?pli=1
+- Choose 'YouTube Data API v3'
+- Create a project
+- Click on enable API
+- Click on 'Credentials'
+- Follow the directions
+- Next:
+$npm install --save youtube-api-search
+
+
+
+
+By Eve Porcello - Lynda.com
+
+REACT
+- React is used in production by huge companies like Uber, Netflix, and Twitter.
+- The DOM (Document Object Model) is the structure of HTML elements that make up a web page.
+- The DOM API refers to how these page elements are accessed and changed.
+- React made updating the DOM faster by using DOM Diffing.
+- DOM Diffing happens when you compare the currently rendered content with the new UI changes that are about to be made.
+- React optimizes this by making only the minimal changes necessary.
+- With DOM Diffing, JavaScript objects are compared and this is much, much faster than writing to or reading from the actual DOM.
+
+PERFORMANCE
+- Whenever you use the functions like Get Element by ID, you're reading from the DOM.
+- When you change any of those elements, change classes, change content, you're writing to the DOM.
+- Writing to and reading from the DOM is slow, working with JavaScript objects is faster.
+
+BACKBONE
+- We also deal with a slower DOM with other frameworks and libraries like Backbone.
+- The way that we typically program with Backbone is that we re-render the same data over and over again.
+- Even when the changes haven't happen everywhere. This re-rendering slows down our apps a lot.
+
+REACT
+- With React, only the minimal changes will be rendered so this is really efficient.
+ - Let's say, I needed to update a single item in a billeted list:
+  a)I won't get rid of the existing list
+  b)I will just make the one required change.
+- We never READ from the DOM and we only WRITE to it when a change is required.

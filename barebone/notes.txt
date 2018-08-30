@@ -1,0 +1,14 @@
+By Eve Porcello - Lynda.com
+**************************************************************************************************************************************************************************
+DOM DIFFING
+- React made updating the DOM faster by using DOM Diffing.
+- DOM Diffing happens when you compare the currently rendered content with the new UI changes that are about to be made.
+- React optimizes this by making only the minimal changes necessary. With DOM Diffing, JavaScript objects are compared and this is much, much faster than writing to or reading from the actual DOM.
+
+- Writing to and reading from the DOM is slow, working with JavaScript objects is faster.
+- We also deal with a slower DOM with other frameworks and libraries like Backbone.
+- The way that we typically program with Backbone is that we re-render the same data over and over again, even when the changes haven't happen everywhere.
+- This re-rendering slows down our apps a lot.
+- With React, only the minimal changes will be rendered so this is really efficient.
+- Let's say, I needed to update a single item in a bulleted list, I won't get rid of the existing list, I will just make the one required change.
+- We never read from the DOM and we only write to it when a change is required.

@@ -1,0 +1,14 @@
+.panel {
+  width: 200px;
+  margin-top: 10px;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+.panel.visible {
+  max-height: 1000px;
+}
+
+.example-enter {
+  height: 0px;
+}

@@ -1,0 +1,55 @@
+Instructions by Jake Wiesler
+
+- Out of the box create-react-app comes with a few handy scripts that allow you to develop your project locally and deploy it afterwards.
+- They can be found in the package.json file at the root of your project directory.
+
+$npm install -g create-react-app
+$create-react-app <your project name>
+$cd <your project name>
+$npm start (run project locally)
+$npm run build (prepare your project for deployment)
+
+
+- create-react-app has a script in package.json called build .
+- This script essentially prepares the application for production by bundling and optimizing all of the code.
+*Deployment with Surge:
+
+$npm install -g surge
+$npm run build
+
+- You should notice that a new folder has been created in the root of your project directory called 'build'.
+- This folder contains the production-ready application.
+
+run the surge command in your project’s root:
+$surge
+
+- Create your credentials (email and password)
+- Project Path Directory to /build
+- Customize url name if you so desire
+
+NOTE:
+- If your app is using client-side-routing, Surge recommends you rename the index.html file in your build directory to 200.html
+BEFORE running the surge command.
+You can find out more information in the Surge documentation.
+https://surge.sh/help/adding-a-200-page-for-client-side-routing
+
+
+*****REDEPLOYMENT/ UPDATES
+After running a new build run of your app you can either:
+1- create a CNAME file in your 'build' directory
+$cd build
+$echo <your project name>.surge.sh > CNAME
+- A CNAME file will be newly created
+
+- Then:
+$surge
+hit enter
+
+**Or
+surge --domain <your project name>.surge.sh
+
+
+**Other commands
+$surge teardown <your project name>.surge.sh (deletes app url)
+$surge list (show list of apps)
+$surge -h (list of useful commands)
