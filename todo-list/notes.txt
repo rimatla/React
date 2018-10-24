@@ -1,0 +1,37 @@
+Todo App by Chris Nwamba
+
+BUNDLE
+*************
+Option 1 (Small Projects)
+Babel Bundle
+
+1a create .babelrc file
+
+2a create index.html on dist dir
+2b source bundle.js in your index.html
+2c create 1_HelloWorld.jsx on src dir
+
+
+3 run
+$ babel ./src/1_HelloWorld.jsx --out-file ./dist/bundle.js
+
+"It may look like nothing has happened, but something has happened. We've actually transpiled everything into this file called bundle.js. All worked on by Babel."
+
+
+*************
+Option 2 (Bigger Projects)
+Webpack Bundle
+
+1 create webpack.config.js file
+1b source bundle.js in your index.html accordingly as assets/bundle.js
+*On terminal
+2 $ webpack
+
+"Per your webpack.config.js configurations , webpack will create an 'assets dir' with a  bundle.js file"
+
+3a now run webpack-dev-server
+"all ready for development!"
+
+3a Hack in case webpack-dev-server is not auto refreshing after each change
+webpack-dev-server --watch-poll
+

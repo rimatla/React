@@ -1,0 +1,53 @@
+body {
+    background: cornflowerblue;
+    color: white;
+}
+
+a.active{
+    color: #000000 !important;
+    text-decoration: underline !important;
+}
+
+h1 {
+    display: inline-block;
+    padding-right: 15px;
+}
+
+a.list-group-item {
+    margin: 5px auto;
+}
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 740px) {
+    /* STYLES GO HERE */
+    body {
+        padding: 0;
+        margin: 0;
+        background: tomato;
+        color: white;
+    }
+
+    .title {
+        text-align: center;
+        padding-top: 70px;
+    }
+
+    .heading {
+        font-size: 60px;
+    }
+
+    .form-control {
+        padding: 40px 12px;
+        font-size: 40px;
+    }
+
+    .list-group-item {
+        padding: 30px 12px;
+        font-size: 40px;
+    }
+
+    .howToSave {
+        font-size: 30px;
+    }
+}
