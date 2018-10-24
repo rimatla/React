@@ -1,0 +1,44 @@
+.App {
+  text-align: center;
+}
+
+#modal-root {
+  position: relative;
+  z-index: 999;
+}
+
+.app {
+  height: 600px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+
+.modal .heading {
+  margin: 100px auto 20px auto;
+  text-align: center;
+  display: block;
+  font-size: 24px;
+  padding-top: 30px;
+}
+
+button {
+  background: tomato;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+h1, h2, h3, h4, h4, h6, p, button {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
