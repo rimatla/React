@@ -24,7 +24,7 @@ class TodoApp extends React.Component{
         };
 
         /**Mock API is a good mock backend for building frontend apps that needs to consume an API in the future.*/
-        this.apiUrl = 'https://57b1924b46b57d1100a3c3f8.mockapi.io/api/todos'
+        this.apiUrl = 'http://57b1924b46b57d1100a3c3f8.mockapi.io/api/todos'
     }
 
     /**Lifecycle methods ps:cannot be used in a stateless component.*/
